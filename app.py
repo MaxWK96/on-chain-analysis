@@ -3,8 +3,11 @@ import json
 import requests
 from flask import Flask, request, jsonify
 import anthropic
+from flask_cors
+import CORS
 
 app = Flask(__name__)
+CORS(app)
 
 ETHERSCAN_API_KEY = os.environ.get("ETHERSCAN_API_KEY")
 ANTHROPIC_API_KEY = os.environ.get("ANTHROPIC_API_KEY")
